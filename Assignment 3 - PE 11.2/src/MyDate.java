@@ -1,11 +1,10 @@
-// **************************
+// ******************************************
 // Jesse Tripp
 // COSC 211
 // Assignment 3 - PE 11.2
-// **************************
-//
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+// Class Description: provided on canvas -
+// creates object for date hired.
+// ******************************************
 
 class MyDate {
   private int year;
@@ -13,22 +12,7 @@ class MyDate {
   private int day;
 
   MyDate() {
-    GregorianCalendar date = new GregorianCalendar();
-    // Find year, month, and day from date. You write your own code to replace the out-dated get
-    // methods
-    year = date.get(Calendar.YEAR);
-    month = date.get(Calendar.MONTH);
-    day = date.get(Calendar.DAY_OF_MONTH);
-  }
 
-  MyDate(long elapsedTime) {
-    GregorianCalendar date = new GregorianCalendar();
-    date.setTimeInMillis(elapsedTime);
-    // Find year, month, and day from date. You write your own code to replace the out-dated get
-    // methods
-    year = date.get(Calendar.YEAR);
-    month = date.get(Calendar.MONTH);
-    day = date.get(Calendar.DAY_OF_MONTH);
   }
 
   MyDate(int year, int month, int day) {
@@ -60,4 +44,9 @@ class MyDate {
   public void setDay(int day) {
     this.day = day;
   }
+
+  public String toString() {
+    return month + " " + day + " " + year;
+  }
+
 }
